@@ -1,0 +1,13 @@
+created:
+    - database/migrations/2020_05_26_030608_create_categories_table.php
+    - app/Category.php
+    - database/factories/CategoryFactory.php
+    - app/Http/Controllers/Dashboard/CategoryController.php
+    - app/Http/Requests/Dashboard/CategoryStoreRequest.php
+    - app/Http/Requests/Dashboard/CategoryUpdateRequest.php
+    - tests/Feature/Http/Controllers/Dashboard/CategoryControllerTest.php
+updated:
+    - routes/web.php
+models:
+    User: {  }
+    Category: { name: 'string:400' }

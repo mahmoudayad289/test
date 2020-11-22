@@ -1,0 +1,37 @@
+models:
+  User:
+    name: string:400
+
+controllers:
+  Dashboard/Category:
+    index:
+      query: all:categories
+      render: categories.index with:categories
+
+    create:
+      render: categories.create
+
+    store:
+      validate: name
+      save: category
+      flash: category.id
+      redirect: categories.index
+    #      send: ReviewNotification to:post.author with:post
+    #      dispatch: SyncMedia with:post
+    #      fire: NewPost with:post
+
+    show:
+      render: categories.show with:category
+
+    edit:
+      render: category.edit with:category
+
+    update:
+      validate: name
+      update: category
+      flash: category.id
+      redirect: categories.index
+
+    destroy:
+      delete: category
+      redirect: categories.index
